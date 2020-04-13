@@ -1,7 +1,7 @@
 package com.buy.rush.controller;
 
-import com.buy.rush.entity.User;
-import com.buy.rush.repository.UserRepository;
+//import com.buy.rush.entity.User;
+//import com.buy.rush.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,8 +20,8 @@ public class HelloController {
 
     private static final Logger log = LoggerFactory.getLogger(HelloController.class);
 
-    @Autowired
-    private UserRepository userRepository;
+    //@Autowired
+    //private UserRepository userRepository;
 
     @GetMapping({"/", "/hello"})
     public ModelAndView index() {
@@ -55,26 +55,26 @@ public class HelloController {
     }
 
 
-    @GetMapping("/test")
-    public String test(HttpServletRequest request){
-        request.setAttribute("title","thymeleaf页面title test");
-        request.setAttribute("desc","欢迎进入本系统desc test");
-
-        Author author = new Author();
-        author.setAge(22);
-        author.setName("王总");
-        author.setEmail("1837307557@qq.com");
-        request.setAttribute("author",author);
-
-        final List<User> users = userRepository.findAllByUsername("u1");
-        log.info("[条件查询] - [{}]", users);
-        final List<User> users2 = userRepository.findByPassword("dsfd");
-        log.info("[条件查询2] - [{}]", users2);
-
-
-
-        return "index";
-    }
+    //@GetMapping("/hello/test")
+    //public String test(HttpServletRequest request){
+    //    request.setAttribute("title","thymeleaf页面title test");
+    //    request.setAttribute("desc","欢迎进入本系统desc test");
+    //
+    //    Author author = new Author();
+    //    author.setAge(22);
+    //    author.setName("王总");
+    //    author.setEmail("1837307557@qq.com");
+    //    request.setAttribute("author",author);
+    //
+    //    final List<User> users = userRepository.findAllByUsername("u1");
+    //    log.info("[条件查询] - [{}]", users);
+    //    final List<User> users2 = userRepository.findByPassword("dsfd");
+    //    log.info("[条件查询2] - [{}]", users2);
+    //
+    //
+    //
+    //    return "index";
+    //}
 
     class Author {
         private int age;
