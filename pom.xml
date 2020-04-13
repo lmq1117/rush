@@ -27,12 +27,22 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-<!--        mysql -->
-<!--        <dependency>-->
-<!--            <groupId>mysql</groupId>-->
-<!--            <artifactId>mysql-connector-java</artifactId>-->
-<!--            <vsersion></vsersion>-->
-<!--        </dependency>-->
+
+        <!--  mysql包  -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+
+        <!--  Spring JDBC 的依赖包，
+        使用 spring-boot-starter-jdbc
+        或 spring-boot-starter-data-jpa
+        将会自动获得HikariCP依赖      -->
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
